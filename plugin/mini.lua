@@ -64,7 +64,21 @@ require('mini.pairs').setup()
 require('mini.statusline').setup()
 require('mini.trailspace').setup()
 require('mini.visits').setup()
-require('mini.pick').setup()
+require('mini.pick').setup({
+  window = {
+    config = function()
+      local height = math.floor(0.618 * vim.o.lines)
+      local width = math.floor(0.618 * vim.o.columns)
+      return {
+        anchor = 'NW',
+        height = height,
+        width = width,
+        row = math.floor(0.5 * (vim.o.lines - height)),
+        col = math.floor(0.5 * (vim.o.columns - width)),
+      }
+    end,
+  },
+})
 
 local map = vim.keymap.set
 map('n', '<leader>e', function() require('mini.files').open(vim.api.nvim_buf_get_name(0)) end, { desc = 'File explorer' })
