@@ -19,6 +19,5 @@ vim.api.nvim_create_autocmd('LspProgress', {
 
 require('mini.basics').setup()
 require('mini.pick').setup()
-require('mini.surround').setup()
 
 vim.lsp.enable({ 'lua_ls', 'rust_analyzer' })
