@@ -37,10 +37,20 @@ require('mini.git').setup()
 require('mini.jump').setup()
 require('mini.jump2d').setup()
 require('mini.extra').setup()
+require('mini.files').setup()
+vim.api.nvim_create_autocmd('User', {
+  pattern = 'MiniFilesBufferCreate',
+  callback = function(ev)
+    vim.keymap.set('n', '<CR>', function()
+      require('mini.files').go_in({ close_on_file = true })
+    end, { buffer = ev.data.buf_id, desc = 'Open file/dir' })
+  end,
+})
 require('mini.pairs').setup()
 require('mini.pick').setup()
 
 local map = vim.keymap.set
+map('n', '<leader>e', function() require('mini.files').open(vim.api.nvim_buf_get_name(0)) end, { desc = 'File explorer' })
 map('n', '<leader>f', '<cmd>Pick files<cr>', { desc = 'Pick files' })
 map('n', '<leader>b', '<cmd>Pick buffers<cr>', { desc = 'Pick buffers' })
 map('n', '<leader>/', '<cmd>Pick grep_live<cr>', { desc = 'Live grep' })
