@@ -1,3 +1,6 @@
+-- Leader key (must be set before keymaps)
+vim.g.mapleader = ' '
+
 -- Completion
 vim.o.autocomplete = true
 vim.o.pumborder = 'rounded'
