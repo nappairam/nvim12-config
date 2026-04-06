@@ -21,6 +21,8 @@ vim.o.hlsearch = true
 vim.o.showmatch = true
 
 -- Display
+vim.opt.fillchars:append({ vert = '│' })
+vim.o.formatoptions = 'jtcroql'
 vim.o.encoding = 'utf-8'
 vim.o.colorcolumn = '81,96,98,100'
 vim.o.listchars = 'tab:→-,trail:▓,eol:↴'
