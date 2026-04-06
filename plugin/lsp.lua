@@ -12,4 +12,4 @@ vim.api.nvim_create_autocmd('LspProgress', {
   end,
 })
 
-vim.lsp.enable({ 'lua_ls', 'rust_analyzer' })
+vim.lsp.enable({ 'lua_ls', 'rust_analyzer', 'nil_ls', 'ts_ls', 'pyright' })
