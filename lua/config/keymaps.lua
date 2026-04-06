@@ -48,6 +48,9 @@ map({ 'n', 'v' }, '<leader>d', '"_d', { desc = 'Delete (no yank)' })
 -- Visual join
 map('v', 'gJ', ':join<cr>', { desc = 'Join lines' })
 
+-- LSP
+map('n', '<leader>s', '<cmd>Pick lsp scope="document_symbol"<cr>', { desc = 'Document symbols' })
+
 -- Terminal
 map('t', '<Esc>', '<c-\\><c-n><esc><cr>', { desc = 'Exit terminal mode' })
 
