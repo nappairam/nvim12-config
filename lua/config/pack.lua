@@ -1,5 +1,4 @@
 vim.pack.add({
-  'https://github.com/sainnhe/gruvbox-material',
   'https://github.com/nvim-treesitter/nvim-treesitter',
   'https://github.com/nvim-mini/mini.nvim',
 })
@@ -18,7 +17,6 @@ vim.api.nvim_create_autocmd('LspProgress', {
   end,
 })
 
-vim.cmd.colorscheme('gruvbox-material')
 require('mini.basics').setup()
 require('mini.pick').setup()
 require('mini.surround').setup()
