@@ -31,7 +31,7 @@ vim.o.wrap = true
 vim.o.numberwidth = 5
 vim.o.conceallevel = 0
 vim.o.laststatus = 3
-vim.o.cmdheight = 1
+vim.o.cmdheight = 0
 vim.o.guicursor = 'n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20'
 
 -- Behavior
