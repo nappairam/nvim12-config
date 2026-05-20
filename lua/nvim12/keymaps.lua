@@ -23,6 +23,8 @@ map('v', 'U', '<nop>')
 map('n', 'X', '<cmd>bnext<cr>', { desc = 'Next buffer' })
 map('n', 'W', '<cmd>w<cr>', { desc = 'Save file' })
 map('n', 'Q', '<cmd>bdelete<cr>', { desc = 'Close buffer' })
+map('n', 'bn', '<cmd>bn<cr>', { desc = 'Move to next buffer' })
+map('n', 'bp', '<cmd>bp<cr>', { desc = 'Move to prev buffer' })
 
 -- Indentation (keep selection)
 map('v', '>', '>gv')
@@ -50,5 +52,4 @@ map('v', 'gJ', ':join<cr>', { desc = 'Join lines' })
 
 -- Terminal
 map('t', '<Esc>', '<c-\\><c-n><esc><cr>', { desc = 'Exit terminal mode' })
-
 
