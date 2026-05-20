@@ -13,3 +13,8 @@ vim.api.nvim_create_autocmd('LspProgress', {
 })
 
 vim.lsp.enable({ 'lua_ls', 'rust_analyzer', 'nil_ls', 'ts_ls', 'pyright', 'clangd' })
+
+-- Neovim has no default goto-definition map; it only wires up 'tagfunc'
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = 'Go to definition' })
+vim.keymap.set('n', 'grd', vim.lsp.buf.definition, { desc = 'Go to definition' })
+vim.keymap.set('n', 'grD', vim.lsp.buf.declaration, { desc = 'Go to declaration' })
