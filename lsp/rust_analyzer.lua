@@ -1,7 +1,7 @@
 return {
   cmd = { 'rust-analyzer' },
   filetypes = { 'rust' },
-  root_markers = { 'Cargo.toml', '.git' },
+  root_markers = { '.jj', '.git', 'Cargo.toml' },
   single_file_support = true,
   before_init = function(init_params, config)
     -- See https://github.com/rust-lang/rust-analyzer/blob/eb5da56d839ae0a9e9f50774fa3eb78eb0964550/docs/dev/lsp-extensions.md?plain=1#L26
